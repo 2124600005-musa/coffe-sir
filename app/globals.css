@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+:root {
+  --cream: #F7F3EE;
+  --beige: #E9E0D5;
+  --coffee: #2D221C;
+  --black: #111111;
+  --muted: #786A60;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--coffee);
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+}
+
+::selection {
+  background: var(--coffee);
+  color: var(--cream);
+}
+
+.noise {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 60;
+  opacity: 0.05;
+  background-image: radial-gradient(#111 1px, transparent 1px);
+  background-size: 18px 18px;
+  mix-blend-mode: multiply;
+}
+
+.section-shell {
+  width: min(1180px, calc(100% - 32px));
+  margin-inline: auto;
+}
+
+.display-font {
+  font-family: var(--font-playfair), Georgia, serif;
+}
+
+.premium-card {
+  border: 1px solid rgba(45, 34, 28, 0.12);
+  background: rgba(255, 255, 255, 0.38);
+  box-shadow: 0 24px 80px rgba(45, 34, 28, 0.08);
+  backdrop-filter: blur(16px);
+}
+
+.coffee-gradient {
+  background:
+    radial-gradient(circle at 20% 20%, rgba(233,224,213,0.95), transparent 32%),
+    radial-gradient(circle at 80% 10%, rgba(45,34,28,0.18), transparent 28%),
+    linear-gradient(135deg, #F7F3EE 0%, #E9E0D5 55%, #D8C6B6 100%);
+}
+
+.map-lines {
+  background-image:
+    linear-gradient(90deg, rgba(45,34,28,.08) 1px, transparent 1px),
+    linear-gradient(rgba(45,34,28,.08) 1px, transparent 1px);
+  background-size: 72px 72px;
+}
+
+.logo-stroke {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
