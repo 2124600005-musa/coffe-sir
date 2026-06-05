@@ -316,7 +316,7 @@ app/page.tsx
 ```
 
 ```text
-6281364083093
+6281364083
 ```
 
 Ganti dengan nomor WhatsApp baru tanpa tanda `+`.
